@@ -187,7 +187,7 @@ void setup() {
 
     LMIC_setLinkCheckMode(0);       // Disable link check validation
     LMIC.dn2Dr = DR_SF9;            // TTS uses SF9 for its RX2 window.
-    LMIC_setDrTxpow(DR_SF9,14);     // Set data rate and transmit power for uplink
+    LMIC_setDrTxpow(DR_SF9,10);     // Set data rate and transmit power for uplink
     LMIC_setAdrMode(1);             // Adaptive data rate disabled
 
     LMIC_setClockError(MAX_CLOCK_ERROR * 1 / 100); 
