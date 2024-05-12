@@ -29,8 +29,7 @@ static const u4_t DEVADDR = 0x0000000000;                                       
 
 //---------------------------------------------------------------------------------------------------------------
 
-#if defined(ARDUINO_SAMD_FEATHER_M0) || defined(ADAFRUIT_FEATHER_M0)      // Pin mapping for Adafruit Feather M0 LoRa
-const lmic_pinmap lmic_pins = {
+const lmic_pinmap lmic_pins = {                                           // Pin mapping for Adafruit Feather M0 LoRa
     .nss = 8,
     .rxtx = LMIC_UNUSED_PIN,
     .rst = 4,
@@ -38,16 +37,6 @@ const lmic_pinmap lmic_pins = {
     .rxtx_rx_active = 0,
     .rssi_cal = 8,
     .spi_freq = 8000000,
-};
-#elif defined(ARDUINO_AVR_FEATHER32U4)                                    // Pin mapping for the Adafruit Feather 32u4 LoRa
-const lmic_pinmap lmic_pins = {
-    .nss = 8,
-    .rxtx = LMIC_UNUSED_PIN,
-    .rst = 4,
-    .dio = {7, 6, LMIC_UNUSED_PIN},
-    .rxtx_rx_active = 0,
-    .rssi_cal = 8,
-    .spi_freq = 1000000,
 };
 #else
 # error "Unknown target"
