@@ -42,13 +42,6 @@ const unsigned BLINK_INTERVAL = 1;  // 1 second
 // Variables to keep track of LED states
 bool green_led_on = false;
 bool red_led_on = false;
-
-//-------------------------------------------- Sleep time -------------------------------------------------------
-
-byte hours = 0;
-byte minutes = 0;
-byte seconds = 8;
-
 //--------------------------------------- Here change your keys -------------------------------------------------
 
 static const PROGMEM u1_t NWKSKEY[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };  // LoRaWAN NwkSKey, network session key, MSB
@@ -271,7 +264,7 @@ void setup() {
 
   LMIC_setLinkCheckMode(0);                       // Disable link check validation
   LMIC.dn2Dr = DR_SF9;                            // TTN uses SF9 for its RX2 window.
-  LMIC_setDrTxpow(DR_SF12, 17);                   // Set the spreading factor and transmit power for the uplink of an antenna with a gain of -7 dBd to ensure the ERP does not exceed limit of 10 dBm.
+  LMIC_setDrTxpow(DR_SF7, 17);                   // Set the spreading factor and transmit power for the uplink of an antenna with a gain of -7 dBd to ensure the ERP does not exceed limit of 10 dBm.
   LMIC_setAdrMode(1);                             // Enable Adaptive Data Rate (ADR)
   LMIC_setClockError(MAX_CLOCK_ERROR * 1 / 100);  // Set the clock error rate, which help in adjusting inaccuracies in the device's clock. Here it's set to 1% of the maximum clock error.
 
