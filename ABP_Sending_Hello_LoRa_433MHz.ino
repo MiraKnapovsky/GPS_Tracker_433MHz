@@ -25,7 +25,7 @@
 
 static const PROGMEM u1_t NWKSKEY[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };  // LoRaWAN NwkSKey, network session key, MSB
 static const u1_t PROGMEM APPSKEY[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };  // LoRaWAN AppSKey, application session key, MSB
-static const u4_t DEVADDR = 0x0000000000;                                                                                                    // LoRaWAN end-device address (DevAddr), MSB
+static const u4_t DEVADDR = 0x0000000000;                                                                                                    // LoRaWAN end-device address (DevAddr)
 
 //---------------------------------------------------------------------------------------------------------------
 
