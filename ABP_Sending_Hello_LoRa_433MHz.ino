@@ -38,9 +38,6 @@ const lmic_pinmap lmic_pins = {                                           // Pin
     .rssi_cal = 8,
     .spi_freq = 8000000,
 };
-#else
-# error "Unknown target"
-#endif
 
 static osjob_t sendjob;                   // Job
 
